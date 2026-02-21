@@ -1,0 +1,5 @@
+{
+  "name": "AI Grading Assistant",
+  "description": "An LMS-embedded AI grading assistant that validates rubric score justifications in real time, challenges unsupported reasoning, and monitors grading consistency across a session for postsecondary professors.",
+  "requestFramePermissions": []
+}

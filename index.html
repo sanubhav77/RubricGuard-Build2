@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Grading Assistant</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Configure Tailwind to use custom colors as per the UI style guide
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#3B82F6',
+              accent: '#8B5CF6',
+              success: '#16A34A',
+              warning: '#D97706',
+              danger: '#DC2626',
+              'gray-50': '#F9FAFB',
+              'gray-100': '#F3F4F6',
+              'gray-200': '#E5E7EB',
+              'gray-300': '#D1D5DB',
+              'gray-400': '#9CA3AF',
+              'gray-500': '#6B7280',
+              'gray-600': '#4B5563',
+              'gray-700': '#374151',
+              'gray-800': '#1F2937',
+              'gray-900': '#111827',
+              // Dark mode colors for text/backgrounds - assuming a simple inverse for now
+              'dark-bg': '#1a202c',
+              'dark-text': '#e2e8f0',
+            },
+            // Custom spacing scale (multiples of 8px)
+            spacing: {
+              '0': '0',
+              '1': '4px', // 0.25rem
+              '2': '8px', // 0.5rem
+              '3': '12px', // 0.75rem
+              '4': '16px', // 1rem
+              '5': '20px', // 1.25rem
+              '6': '24px', // 1.5rem
+              '7': '28px', // 1.75rem
+              '8': '32px', // 2rem
+              '9': '36px', // 2.25rem
+              '10': '40px', // 2.5rem
+              '12': '48px', // 3rem
+              '16': '64px', // 4rem
+              '20': '80px', // 5rem
+              '24': '96px', // 6rem
+              '32': '128px', // 8rem
+              '40': '160px', // 10rem
+              '48': '192px', // 12rem
+              '56': '224px', // 14rem
+              '64': '256px', // 16rem
+            },
+            borderRadius: {
+              'DEFAULT': '8px', // Rounded 8px cards
+            },
+            boxShadow: {
+              'subtle': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', '"Noto Sans"', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
+              mono: ['SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
+            }
+          },
+        },
+      }
+    </script>
+    <!-- Add Google Fonts for Inter (or any sans-serif font) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
+    "recharts": "https://esm.sh/recharts@^3.7.0"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased dark:bg-gray-900 dark:text-gray-200 transition-colors duration-200">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
